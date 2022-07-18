@@ -102,6 +102,12 @@ hr {
 /* -------------------
 Courses Style 
 ------------------------ */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
 .course .course-banner img {
     width: 224px;
     height: 104px;
@@ -124,5 +130,32 @@ Courses Style
 
 .fa-star.empty {
     color: #AEAEAE;
+}
 
+/* ---------
+     Media Queries
+ ----------*/
+
+/* mobile devices */
+@media only screen and (max-width:688px) {
+    .conatiner {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .players {
+        background-color: red;
+    }
 }
